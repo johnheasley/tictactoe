@@ -1,0 +1,106 @@
+.vertAlign {
+    display: grid;
+    width: 10rem;
+    grid-template-columns: repeat(3, .5fr);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#crossText, #circleText {
+    font-weight: bolder;
+}
+/*size and layout rows*/
+.row {
+    width: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+/*size and layout each cell using col class*/
+.col {
+    height: 5rem;
+    width: 5rem;
+    border: solid black medium;
+}
+/*remove left border from first col child*/
+.col:first-child {
+    border-left:  none;
+}
+/*remove right border from last col child*/
+.col:last-child {
+    border-right: none;
+}
+/*remove top border from first child of first row*/
+.row:first-child>.col {
+    border-top: none;
+}
+/*remove bottom border from first child of last row*/
+.row:last-child>.col {
+    border-bottom: none;
+}
+/*center cross and circle characters in div*/
+.cross, .circle {
+    position: relative;
+    text-align: center;
+}
+/*size cross characters*/
+.cross {
+    height: 3rem;
+    font-size: 2rem;
+    top: 1rem;
+    font-weight: bolder;
+}
+/*size circle characters*/
+.circle {
+    height: 3rem;
+    font-size: 2.5rem;
+    top: 1.125rem;
+    font-weight: bold;
+}
+/*vertical line styling*/
+.vL {
+    position: relative;
+    top: -4rem;
+    left: 2.45rem;
+    border-left: solid black thick;
+    height: 170%;
+}
+/*horizontal line styling*/
+.hL {
+    position: relative;
+    top: -1.5rem;
+    border-top: solid black thick;
+}
+/*left downward diagonal line styling*/
+.ldL {
+    position: relative;
+    top: -3.4rem;
+    left: -1.8rem;
+    border-left: solid black thick;
+    height: 7.1rem;
+    transform:rotate(135deg);
+}
+/*right upward diagonal line styling*/
+.rdL {
+    position: relative;
+    top: -3.4rem;
+    left: 1.8rem;
+    border-left: solid black thick;
+    height: 7.1rem;
+    transform:rotate(45deg);
+}
+/*style reset button*/
+#reset {
+    position: relative;
+    border: solid black thick;
+    top: 1rem;
+    height: 1rem;
+    width: 5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/*visual feedback for user on click*/
+#reset:active {
+    color: white;
+    background-color: black;
+    border-color: white;
+}

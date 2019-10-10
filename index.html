@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Whoa!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="gameBoard" class="gameBoard">
+        <div class="row" id="row0">
+            <div class="col col0 row0 sqr ltdg" id="row0col0" onclick="tictactoe(0,0);"></div>
+            <div class="col col1 row0 sqr" id="row0col1" onclick="tictactoe(0,1);"></div>
+            <div class="col col2 row0 sqr rtdg" id="row0col2" onclick="tictactoe(0,2);"></div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col col0 row1 sqr" id="row1col0" onclick="tictactoe(1,0);"></div>
+            <div class="col col1 row1 sqr ltdg rtdg" id="row1col1" onclick="tictactoe(1,1);"></div>
+            <div class="col col2 row1 sqr" id="row1col2" onclick="tictactoe(1,2);"></div>
+        </div>
+        <div class="row" id="row2">
+            <div class="col col0 row2 sqr rtdg" id="row2col0" onclick="tictactoe(2,0);"></div>
+            <div class="col col1 row2 sqr" id="row2col1" onclick="tictactoe(2,1);"></div>
+            <div class="col col2 row2 sqr ltdg" id="row2col2" onclick="tictactoe(2,2);"></div>
+        </div>
+    </div>
+    <div id="scoreBoard" class="scoreboard">
+        <div class='vertAlign'>
+            <div id='crossText'>&#9587;</div>
+            <div> - </div>
+            <div id='cross'>0</div>
+        </div>
+        <div class='vertAlign'>
+            <div id='circleText'>&#9711;</div>
+            <div> - </div>
+            <div id='circle'>0</div>
+        </div>
+    </div>
+    <div id="reset" onclick='resetboard();'>Reset</div>
+</body>
+
+</html>
